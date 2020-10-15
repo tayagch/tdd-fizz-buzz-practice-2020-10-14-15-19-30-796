@@ -16,6 +16,10 @@ public class FizzBuzz {
             return BUZZ;
         }
 
+        if(orderNumber % 7 == 0){
+            return "Whizz";
+        }
+
         return String.valueOf(orderNumber);
     }
 }
