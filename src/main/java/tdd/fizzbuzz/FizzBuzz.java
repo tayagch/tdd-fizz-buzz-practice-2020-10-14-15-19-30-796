@@ -9,6 +9,11 @@ public class FizzBuzz {
         if (orderNumber % MODULO_3 == 0) {
             return FIZZ;
         }
+
+        if(orderNumber % 5 == 0){
+            return "Buzz";
+        }
+
         return String.valueOf(orderNumber);
     }
 }
