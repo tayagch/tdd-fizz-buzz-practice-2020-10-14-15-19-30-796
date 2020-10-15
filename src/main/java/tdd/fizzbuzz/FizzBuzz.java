@@ -8,34 +8,24 @@ public class FizzBuzz {
     private static final String BUZZ = "Buzz";
     private static final int MODULO_7 = 7;
     private static final String WHIZZ = "Whizz";
-    private static final String FIZZ_BUZZ = "FizzBuzz";
-    private static final String FIZZ_WHIZZ = "FizzWhizz";
 
     public String countOff(int orderNumber) {
-        if(isModulo(orderNumber, MODULO_3) && isModulo(orderNumber, MODULO_5)){
-            return FIZZ_BUZZ;
+        String result = "";
+        if (isModulo(new GameRule(orderNumber, MODULO_3))) {
+            result += FIZZ;
         }
 
-        if(isModulo(orderNumber,MODULO_3) && isModulo(orderNumber,MODULO_7)){
-            return FIZZ_WHIZZ;
+        if(isModulo(new GameRule(orderNumber, MODULO_5))){
+            result += BUZZ;
         }
 
-        if (isModulo(orderNumber, MODULO_3)) {
-            return FIZZ;
+        if(isModulo(new GameRule(orderNumber, MODULO_7))){
+            result += WHIZZ;
         }
-
-        if(isModulo(orderNumber, MODULO_5)){
-            return BUZZ;
-        }
-
-        if(isModulo(orderNumber, MODULO_7)){
-            return WHIZZ;
-        }
-
-        return String.valueOf(orderNumber);
+        return result == "" ? String.valueOf(orderNumber) : result;
     }
 
-    private boolean isModulo(int orderNumber, int moduloValue) {
-        return orderNumber % moduloValue == 0;
+    private boolean isModulo(GameRule gameRule) {
+        return gameRule.getOrderNumber() % gameRule.getModuloValue() == 0;
     }
 }
