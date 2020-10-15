@@ -12,9 +12,9 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzzWhizz = new FizzBuzz();
 
         // When
+        String actual = fizzBuzzWhizz.countOff(orderNumber);
 
         // Then
-        String actual = fizzBuzzWhizz.countOff(orderNumber);
         assertEquals("1",actual);
     }
 }
