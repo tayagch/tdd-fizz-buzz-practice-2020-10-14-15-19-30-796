@@ -15,6 +15,10 @@ public class FizzBuzz {
             return FIZZ_BUZZ;
         }
 
+        if(isModulo(orderNumber,MODULO_3) && isModulo(orderNumber,MODULO_7)){
+            return "FizzWhizz";
+        }
+
         if (isModulo(orderNumber, MODULO_3)) {
             return FIZZ;
         }
