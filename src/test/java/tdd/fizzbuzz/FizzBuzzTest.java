@@ -19,7 +19,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_fizz_given_count_off_when_order_number_3() {
+    public void should_return_fizz_given_count_off_when_order_number_3() {
         // Given
         int orderNumber = 3;
         FizzBuzz fizzBuzzWhizz = new FizzBuzz();
@@ -32,7 +32,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should__return_buzz_given_count_off_when_order_number_5() {
+    public void should__return_buzz_given_count_off_when_order_number_5() {
         // Given
         int orderNumber = 5;
 
@@ -45,7 +45,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_whizz_given_count_off_when_order_number_7() {
+    public void should_return_whizz_given_count_off_when_order_number_7() {
         // Given
         int orderNumber = 7;
         FizzBuzz fizzBuzzWhizz = new FizzBuzz();
