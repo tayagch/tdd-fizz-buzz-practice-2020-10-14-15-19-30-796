@@ -6,6 +6,8 @@ public class FizzBuzz {
     private static final String FIZZ = "Fizz";
     private static final int MODULO_5 = 5;
     private static final String BUZZ = "Buzz";
+    private static final int MODULO_7 = 7;
+    private static final String WHIZZ = "Whizz";
 
     public String countOff(int orderNumber) {
         if (orderNumber % MODULO_3 == 0) {
@@ -16,8 +18,8 @@ public class FizzBuzz {
             return BUZZ;
         }
 
-        if(orderNumber % 7 == 0){
-            return "Whizz";
+        if(orderNumber % MODULO_7 == 0){
+            return WHIZZ;
         }
 
         return String.valueOf(orderNumber);
