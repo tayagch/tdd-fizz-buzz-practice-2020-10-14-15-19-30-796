@@ -9,6 +9,7 @@ public class FizzBuzz {
     private static final int MODULO_7 = 7;
     private static final String WHIZZ = "Whizz";
     private static final String FIZZ_BUZZ = "FizzBuzz";
+    private static final String FIZZ_WHIZZ = "FizzWhizz";
 
     public String countOff(int orderNumber) {
         if(isModulo(orderNumber, MODULO_3) && isModulo(orderNumber, MODULO_5)){
@@ -16,7 +17,7 @@ public class FizzBuzz {
         }
 
         if(isModulo(orderNumber,MODULO_3) && isModulo(orderNumber,MODULO_7)){
-            return "FizzWhizz";
+            return FIZZ_WHIZZ;
         }
 
         if (isModulo(orderNumber, MODULO_3)) {
